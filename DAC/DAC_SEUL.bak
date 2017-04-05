@@ -1,0 +1,91 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:DAC
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L AD5761R AD1
+U 1 1 58E45D10
+P 5850 3700
+F 0 "AD1" H 5500 4400 50  0000 L CNN
+F 1 "AD5761R" H 5950 4400 50  0000 L CNN
+F 2 "Housings_SSOP:TSSOP-16_4.4x5mm_Pitch0.65mm" H 5850 3700 50  0001 C CIN
+F 3 "" H 5850 3650 50  0000 C CNN
+	1    5850 3700
+	-1   0    0    1   
+$EndComp
+NoConn ~ 5350 3200
+$Comp
+L C C1
+U 1 1 58E463AD
+P 4900 4150
+F 0 "C1" H 4925 4250 50  0000 L CNN
+F 1 "100nF" H 4925 4050 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:CP_Axial_L10.0mm_D4.5mm_P15.00mm_Horizontal" H 4938 4000 50  0001 C CNN
+F 3 "" H 4900 4150 50  0000 C CNN
+	1    4900 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C2
+U 1 1 58E4659D
+P 6700 3250
+F 0 "C2" H 6725 3350 50  0000 L CNN
+F 1 "100nF" H 6725 3150 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:CP_Axial_L10.0mm_D4.5mm_P15.00mm_Horizontal" H 6738 3100 50  0001 C CNN
+F 3 "" H 6700 3250 50  0000 C CNN
+	1    6700 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X08 H1
+U 1 1 58E46CAE
+P 7200 3700
+F 0 "H1" H 7200 4150 50  0000 C CNN
+F 1 "HEADER_DAC_1" V 7300 3700 50  0000 C CNN
+F 2 "" H 7200 3700 50  0000 C CNN
+F 3 "" H 7200 3700 50  0000 C CNN
+	1    7200 3700
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

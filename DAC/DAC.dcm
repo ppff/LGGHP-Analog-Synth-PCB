@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AD5761R
+D Multiple range, 12/16 bits , Bipolar/Unipolar , Voltage Output DAC
+K 16bit DAC 
+F http://www.analog.com/media/en/technical-documentation/data-sheets/AD5761R_5721R.pdf
+$ENDCMP
+#
+#End Doc Library
