@@ -1,0 +1,6 @@
+(fp_lib_table
+  (lib (name bornier)(type KiCad)(uri "$(KIPRJMOD)\\bornier.pretty")(options "")(descr ""))
+  (lib (name switch)(type KiCad)(uri "$(KIPRJMOD)\\switch.pretty")(options "")(descr ""))
+  (lib (name test)(type KiCad)(uri "$(KIPRJMOD)\\test.pretty")(options "")(descr ""))
+  (lib (name jack)(type KiCad)(uri "$(KIPRJMOD)\\jack.pretty")(options "")(descr ""))
+)
