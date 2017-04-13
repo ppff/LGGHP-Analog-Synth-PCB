@@ -60,7 +60,7 @@ L R R2
 U 1 1 58BEB6D9
 P 4650 2650
 F 0 "R2" V 4730 2650 50  0000 C CNN
-F 1 "50k" V 4650 2650 50  0000 C CNN
+F 1 "47k" V 4650 2650 50  0000 C CNN
 F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4580 2650 50  0001 C CNN
 F 3 "" H 4650 2650 50  0000 C CNN
 	1    4650 2650
@@ -71,7 +71,7 @@ L R R3
 U 1 1 58BEB7A6
 P 5150 3250
 F 0 "R3" V 5230 3250 50  0000 C CNN
-F 1 "50k" V 5150 3250 50  0000 C CNN
+F 1 "47k" V 5150 3250 50  0000 C CNN
 F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5080 3250 50  0001 C CNN
 F 3 "" H 5150 3250 50  0000 C CNN
 	1    5150 3250
@@ -82,7 +82,7 @@ L R R5
 U 1 1 58BEBC1E
 P 6950 1900
 F 0 "R5" V 7030 1900 50  0000 C CNN
-F 1 "100k" V 6950 1900 50  0000 C CNN
+F 1 "33k" V 6950 1900 50  0000 C CNN
 F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6880 1900 50  0001 C CNN
 F 3 "" H 6950 1900 50  0000 C CNN
 	1    6950 1900
@@ -148,7 +148,7 @@ L R R4
 U 1 1 58BEDCAD
 P 5400 3050
 F 0 "R4" V 5480 3050 50  0000 C CNN
-F 1 "50k" V 5400 3050 50  0000 C CNN
+F 1 "47k" V 5400 3050 50  0000 C CNN
 F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5330 3050 50  0001 C CNN
 F 3 "" H 5400 3050 50  0000 C CNN
 	1    5400 3050
@@ -401,11 +401,11 @@ F 3 "" H 6950 1550 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X03 H1
+L CONN_01X03 B1
 U 1 1 58E394FA
 P 4850 3350
-F 0 "H1" H 4850 3550 50  0000 C CNN
-F 1 "HEADER_ALIM" V 4950 3350 50  0000 C CNN
+F 0 "B1" H 4850 3550 50  0000 C CNN
+F 1 "Bornier" V 4950 3350 50  0000 C CNN
 F 2 "bornier:Bornier_3pins" H 4850 3350 50  0001 C CNN
 F 3 "" H 4850 3350 50  0000 C CNN
 	1    4850 3350
@@ -425,11 +425,11 @@ $EndComp
 NoConn ~ 2500 2250
 Text Label 2500 2400 2    60   ~ 0
 SDO
-Text Label 3850 1500 3    60   ~ 0
+Text Label 1900 2250 0    60   ~ 0
 SDO
 Text Label 2500 2550 2    60   ~ 0
 ~LDAC
-Text Label 3950 1500 3    60   ~ 0
+Text Label 1900 2350 0    60   ~ 0
 ~LDAC
 $Comp
 L C C6
@@ -444,23 +444,23 @@ F 3 "" H 2050 3250 50  0000 C CNN
 $EndComp
 Text Label 2500 2850 2    60   ~ 0
 ~SYNC
-Text Label 4050 1500 3    60   ~ 0
+Text Label 1900 2550 0    60   ~ 0
 ~SYNC
 Text Label 2500 3000 2    60   ~ 0
 SCLK
-Text Label 4150 1500 3    60   ~ 0
+Text Label 1900 2650 0    60   ~ 0
 SCLK
 Text Label 3500 3000 0    60   ~ 0
 ~RESET
-Text Label 4250 1500 3    60   ~ 0
+Text Label 3650 3800 1    60   ~ 0
 ~RESET
 Text Label 3500 3150 0    60   ~ 0
 ~CLEAR
-Text Label 4350 1500 3    60   ~ 0
+Text Label 3550 3800 1    60   ~ 0
 ~CLEAR
 Text Label 3500 3300 0    60   ~ 0
 ~ALERT
-Text Label 4450 1500 3    60   ~ 0
+Text Label 3450 3800 1    60   ~ 0
 ~ALERT
 $Comp
 L C C5
@@ -486,29 +486,18 @@ F 3 "" H 5750 2750 50  0000 C CNN
 $EndComp
 $Comp
 L LM324 U1
-U 2 1 58E7D0DD
+U 4 1 58E7D0DD
 P 7350 2650
 F 0 "U1" H 7400 2850 50  0000 C CNN
 F 1 "LM324" H 7500 2450 50  0000 C CNN
 F 2 "Housings_DIP:DIP-14_W7.62mm" H 7300 2750 50  0001 C CNN
 F 3 "" H 7400 2850 50  0000 C CNN
-	2    7350 2650
+	4    7350 2650
 	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_01X08 H2
-U 1 1 58E8138D
-P 4200 1300
-F 0 "H2" H 4200 1750 50  0000 C CNN
-F 1 "HEADER_DAC" V 4300 1300 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm" H 4200 1300 50  0001 C CNN
-F 3 "" H 4200 1300 50  0000 C CNN
-	1    4200 1300
-	0    -1   -1   0   
 $EndComp
 Text Label 2500 2700 2    60   ~ 0
 SDI
-Text Label 4550 1500 3    60   ~ 0
+Text Label 1900 2450 0    60   ~ 0
 SDI
 $Comp
 L SWITCH_INV SW1
@@ -634,4 +623,26 @@ Wire Wire Line
 Connection ~ 8950 2100
 Wire Wire Line
 	9000 2350 9000 2200
+$Comp
+L CONN_01X05 H1
+U 1 1 58EFDB48
+P 1700 2450
+F 0 "H1" H 1700 2750 50  0000 C CNN
+F 1 "Header_left" V 1800 2450 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 1700 2450 50  0001 C CNN
+F 3 "" H 1700 2450 50  0000 C CNN
+	1    1700 2450
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X03 H2
+U 1 1 58EFE144
+P 3550 4000
+F 0 "H2" H 3550 4200 50  0000 C CNN
+F 1 "Header_right" V 3650 4000 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 3550 4000 50  0001 C CNN
+F 3 "" H 3550 4000 50  0000 C CNN
+	1    3550 4000
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
