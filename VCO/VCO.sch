@@ -245,17 +245,6 @@ F 3 "" H 5900 2250 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L JACK_MONO J1
-U 1 1 58D1CA56
-P 9300 2100
-F 0 "J1" H 9300 2350 60  0000 C CNN
-F 1 "JACK_STEREO" H 9750 2250 60  0000 C CNN
-F 2 "jack:jack-stereo" H 9550 2150 60  0001 C CNN
-F 3 "" H 9550 2150 60  0000 C CNN
-	1    9300 2100
-	1    0    0    -1  
-$EndComp
-$Comp
 L GND #PWR08
 U 1 1 58D1CBD1
 P 9000 2350
@@ -423,14 +412,6 @@ F 3 "" H 4650 3350 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 NoConn ~ 2500 2250
-Text Label 2500 2400 2    60   ~ 0
-SDO
-Text Label 1900 2250 0    60   ~ 0
-SDO
-Text Label 2500 2550 2    60   ~ 0
-~LDAC
-Text Label 1900 2350 0    60   ~ 0
-~LDAC
 $Comp
 L C C6
 U 1 1 58E3F33A
@@ -444,24 +425,12 @@ F 3 "" H 2050 3250 50  0000 C CNN
 $EndComp
 Text Label 2500 2850 2    60   ~ 0
 ~SYNC
-Text Label 1900 2550 0    60   ~ 0
+Text Label 1900 2450 0    60   ~ 0
 ~SYNC
 Text Label 2500 3000 2    60   ~ 0
 SCLK
 Text Label 1900 2650 0    60   ~ 0
 SCLK
-Text Label 3500 3000 0    60   ~ 0
-~RESET
-Text Label 3650 3800 1    60   ~ 0
-~RESET
-Text Label 3500 3150 0    60   ~ 0
-~CLEAR
-Text Label 3550 3800 1    60   ~ 0
-~CLEAR
-Text Label 3500 3300 0    60   ~ 0
-~ALERT
-Text Label 3450 3800 1    60   ~ 0
-~ALERT
 $Comp
 L C C5
 U 1 1 58E45976
@@ -497,7 +466,7 @@ F 3 "" H 7400 2850 50  0000 C CNN
 $EndComp
 Text Label 2500 2700 2    60   ~ 0
 SDI
-Text Label 1900 2450 0    60   ~ 0
+Text Label 1900 2250 0    60   ~ 0
 SDI
 $Comp
 L SWITCH_INV SW1
@@ -510,19 +479,23 @@ F 3 "" H 8400 2100 50  0000 C CNN
 	1    8400 2100
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	4800 2650 5400 2650
-Wire Wire Line
-	4800 2450 5400 2450
-Wire Wire Line
-	5150 2450 5150 3100
-Connection ~ 5150 2450
+$Comp
+L CONN_01X05 H1
+U 1 1 58EFDB48
+P 1700 2450
+F 0 "H1" H 1700 2750 50  0000 C CNN
+F 1 "Header_left" V 1800 2450 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 1700 2450 50  0001 C CNN
+F 3 "" H 1700 2450 50  0000 C CNN
+	1    1700 2450
+	-1   0    0    1   
+$EndComp
 Wire Wire Line
 	5150 3400 5150 3600
 Wire Wire Line
 	5150 4000 5150 4150
 Wire Wire Line
-	5250 2650 5250 2850
+	5250 2550 5250 2850
 Wire Wire Line
 	5250 2850 5400 2850
 Wire Wire Line
@@ -531,22 +504,15 @@ Connection ~ 5250 2650
 Wire Wire Line
 	5400 3200 5400 3350
 Wire Wire Line
-	5300 2450 5300 1950
+	5300 1950 5300 2650
 Wire Wire Line
 	5300 1950 5550 1950
 Connection ~ 5300 2450
 Connection ~ 6250 2550
 Wire Wire Line
-	6950 3000 7350 3000
-Wire Wire Line
-	6950 2050 6950 3150
-Connection ~ 6950 2550
-Wire Wire Line
-	6950 2750 7050 2750
-Connection ~ 6950 2750
+	6650 2750 7050 2750
 Wire Wire Line
 	6950 1550 6950 1750
-Connection ~ 6950 3000
 Wire Wire Line
 	6950 3450 6950 3600
 Wire Wire Line
@@ -560,14 +526,9 @@ Connection ~ 4500 2550
 Wire Wire Line
 	4300 2450 4300 2550
 Connection ~ 4300 2550
-Wire Wire Line
-	6600 2050 6600 2550
-Connection ~ 6600 2550
 Connection ~ 7900 2650
 Wire Wire Line
 	6250 1950 6250 2550
-Wire Wire Line
-	6000 2550 7050 2550
 Wire Wire Line
 	4500 2550 4250 2550
 Wire Wire Line
@@ -589,7 +550,7 @@ Wire Wire Line
 Wire Wire Line
 	3700 3100 3850 3100
 Wire Wire Line
-	6250 1950 5850 1950
+	5850 1950 7900 1950
 Wire Wire Line
 	2500 3300 2350 3300
 Wire Wire Line
@@ -607,40 +568,66 @@ Wire Wire Line
 Wire Wire Line
 	7650 2650 7900 2650
 Wire Wire Line
-	6600 2050 7750 2050
-Wire Wire Line
-	7750 2050 7750 2000
-Wire Wire Line
-	7750 2000 7900 2000
-Wire Wire Line
 	8900 2100 9000 2100
 Wire Wire Line
-	8950 2100 8950 2000
-Wire Wire Line
-	8950 2000 9000 2000
-Connection ~ 8950 2100
-Wire Wire Line
 	9000 2350 9000 2200
+Wire Wire Line
+	5400 2450 5400 2550
+Wire Wire Line
+	5400 2550 5250 2550
+Wire Wire Line
+	5300 2650 5400 2650
+Wire Wire Line
+	4800 2450 5300 2450
+Wire Wire Line
+	4800 2650 5250 2650
+Connection ~ 5150 2450
+Wire Wire Line
+	5150 2450 5150 3100
+Wire Wire Line
+	6950 2050 6950 3150
+Connection ~ 6950 2050
+Wire Wire Line
+	6000 2550 6650 2550
+Wire Wire Line
+	7900 1950 7900 2000
+Connection ~ 6250 1950
+Wire Wire Line
+	6650 2550 6650 2750
+Wire Wire Line
+	7050 2550 6950 2550
+Connection ~ 6950 2550
+Wire Wire Line
+	6950 3000 7350 3000
+Connection ~ 6950 3000
 $Comp
-L CONN_01X05 H1
-U 1 1 58EFDB48
-P 1700 2450
-F 0 "H1" H 1700 2750 50  0000 C CNN
-F 1 "Header_left" V 1800 2450 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 1700 2450 50  0001 C CNN
-F 3 "" H 1700 2450 50  0000 C CNN
-	1    1700 2450
-	-1   0    0    1   
+L CONN_01X03 B2
+U 1 1 59021566
+P 9200 2100
+F 0 "B2" H 9200 2300 50  0000 C CNN
+F 1 "Bornier_OUT" V 9300 2100 50  0000 C CNN
+F 2 "bornier:Bornier_3pins" H 9200 2100 50  0001 C CNN
+F 3 "" H 9200 2100 50  0000 C CNN
+	1    9200 2100
+	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	9000 2100 9000 2000
 $Comp
-L CONN_01X03 H2
-U 1 1 58EFE144
-P 3550 4000
-F 0 "H2" H 3550 4200 50  0000 C CNN
-F 1 "Header_right" V 3650 4000 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 3550 4000 50  0001 C CNN
-F 3 "" H 3550 4000 50  0000 C CNN
-	1    3550 4000
+L GND #PWR019
+U 1 1 59021A14
+P 2500 2550
+F 0 "#PWR019" H 2500 2300 50  0001 C CNN
+F 1 "GND" H 2500 2400 50  0000 C CNN
+F 2 "" H 2500 2550 50  0000 C CNN
+F 3 "" H 2500 2550 50  0000 C CNN
+	1    2500 2550
 	0    1    1    0   
 $EndComp
+NoConn ~ 1900 2350
+NoConn ~ 3500 3000
+NoConn ~ 3500 3150
+NoConn ~ 3500 3300
+NoConn ~ 2500 2400
+NoConn ~ 1900 2550
 $EndSCHEMATC
